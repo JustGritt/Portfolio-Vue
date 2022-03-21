@@ -8,9 +8,9 @@ export default defineConfig({
     loaderOptions: {
       scss: {
         prependData: `
-          @import "@/scss/colors.scss";
-          @import "@/scss/fonts.scss";
-          @import "@/scss/globals.scss";
+          @import "@/scss/mixins/colors.scss";
+          @import "@/scss/mixins/fonts.scss";
+          @import "@/scss/mixins/globals.scss";
         `
       }
     }

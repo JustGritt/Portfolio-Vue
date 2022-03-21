@@ -4,11 +4,13 @@
 import HelloWorld from './components/HelloWorld.vue'
 import Header from './components/partials/Header.vue'
 import Landing from './components/Landing.vue'
+import Projects from './components/Projects.vue'
 </script>
 
 <template>
   <Header />
   <Landing />
+  <Projects />
   <HelloWorld msg="Hello Vue 3 + Vite" />
 </template>
 
