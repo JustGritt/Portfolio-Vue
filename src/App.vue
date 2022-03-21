@@ -11,19 +11,30 @@ import Projects from './components/Projects.vue'
   <Header />
   <Landing />
   <Projects />
-  <HelloWorld msg="Hello Vue 3 + Vite" />
 </template>
 
 <style>
-body {
+
+html, body { 
+  box-sizing: border-box; 
+  scroll-behavior: smooth;
   margin: 0;
   padding: 0;
+}
+
+*, *:before, *:after {
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  background: transparent;
 }
 
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
 }
 </style>

@@ -23,6 +23,7 @@ section#projects {
     flex-direction: column;
     overflow: hidden;
     background: #8a81cc;
+    border-top: 5px solid #8a81cc;
     font-family: 'Quicksand';
 
     .waves {

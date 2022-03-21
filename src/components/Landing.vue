@@ -155,7 +155,7 @@ section#landing {
 
     .waves {
         position: absolute;
-        bottom: 0;
+        bottom: -5px;
         height: 100px;
         width: 100%;
         background-image: url('/src/assets/project-waves.svg');
