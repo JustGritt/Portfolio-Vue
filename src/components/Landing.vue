@@ -97,12 +97,12 @@ section#landing {
                     align-content: center;
                 }
                 a {
-                    font-size: clamp(1rem, 9vw, 1vw);
+                    font-size: clamp(1rem, 9vw, .8vw);
                     background: #504980;
                     margin: 25px 50px 0 0;
                     color: #fff;
                     padding: 20px;
-                    width: 250px;
+                    min-width: 250px;
                     font-weight: bold;
                     text-align: center;
                     border-radius: 5px;

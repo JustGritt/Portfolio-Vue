@@ -5,12 +5,14 @@ import HelloWorld from './components/HelloWorld.vue'
 import Header from './components/partials/Header.vue'
 import Landing from './components/Landing.vue'
 import Projects from './components/Projects.vue'
+import Timeline from './components/Timeline.vue'
 </script>
 
 <template>
   <Header />
   <Landing />
   <Projects />
+  <Timeline />
 </template>
 
 <style>

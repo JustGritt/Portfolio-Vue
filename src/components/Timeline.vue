@@ -3,9 +3,8 @@
 </script>
 
 <template>
-    <section id="projects">
+    <section id="timeline">
         <div class="waves"></div>
-        <h3 class="title">Quelques projets</h3>
     </section>
 </template>
 
@@ -17,7 +16,7 @@
 @import "/src/scss/colors.scss";
 @import "/src/scss/fonts.scss";
 
-section#projects {
+section#timeline {
     position: relative;
     height: 100vh;
     width: 100%;
@@ -26,9 +25,10 @@ section#projects {
     align-content: center;
     flex-direction: column;
     overflow: hidden;
-    background: #8a81cc;
+    background: black;
     border-top: 5px solid #8a81cc;
     font-family: 'Quicksand';
+    background: linear-gradient(180deg, #B19EFF 0%, #FFBFE0 100%);
     h3 {
         position: absolute;
         top: 0;
@@ -43,7 +43,7 @@ section#projects {
 
     .waves {
         position: absolute;
-        bottom: -150px;
+        top: 0;
         transform: rotate(180deg);
         min-height: 150px;
         width: 100%;
