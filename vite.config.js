@@ -10,7 +10,7 @@ export default defineConfig({
         prependData: `
           @import "@/scss/mixins/colors.scss";
           @import "@/scss/mixins/fonts.scss";
-          @import "@/scss/mixins/globals.scss";
+          @import "@/scss/globals.scss";
         `
       }
     }

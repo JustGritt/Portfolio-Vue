@@ -1,56 +1,90 @@
 <script setup>  
     defineProps({ msg: String })
+
+    
 </script>
 
 <template>
 <header>
     <nav>
-        <ul>
+        <ul class="flex">
             <li><a href="#">Mes projets</a></li>
             <li><a href="#">Mon parcours</a></li>
             <li><a href="#">Me contacter</a></li>
         </ul>
+        <div class="dark-mode">
+            <img src="/src/assets/moon.svg" alt="moon">
+        </div>
     </nav>
 </header>
 </template>
 
+
+
 <style lang="scss" scoped>
+@import "/src/scss/globals.scss";
+@import "/src/scss/colors.scss";
+@import "/src/scss/fonts.scss";
 
 header {
     position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
     z-index: 10;
-    font-family: 'Concert One', sans-serif;
-    background: rgba(255, 255, 255, .7);
-    border-bottom: 10px solid #373780;
-    ul {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        list-style: none;
-        a {
-            color: #373780;
-            font-size: clamp(18px, 9vw, 24px);
-            margin: 0 50px;
-            text-decoration: none;
-            position: relative;
-            padding: 10px 15px;
+    transition: all .2s ease-in-out;
+    &:hover {
+        background: rgba(255, 255, 255, .7);
+        border-bottom: 10px solid $dark-blue;
+    }
+    // @media screen and (max-width: $mobile) { bottom: 0; }
+    nav {
+        position: relative;
+        ul {
+            // @media screen and (max-width: $mobile) { flex-direction: column; }
+            li { 
+                display: flex;
+                margin: 0 25px;
+                text-align: center;
+                a {
+                    font-family: $secondary;
+                    font-size: clamp(14px, 9vw, 24px);
+                    color: $dark-blue;
+                    padding: 10px 15px;
+                    border-radius: 8px;
+                    transition: all .2s ease-in-out;
+                    &:hover { 
+                        background: #373780; 
+                        color: #eee; 
+                    }
+                    @media screen and (max-width: $mobile) {
+                        font-size: clamp(12px, 9vw, 18px);
+                        margin: 0;
+                        padding: 0;
+                        text-align: center;
+                        &:hover { 
+                            color: #373780; 
+                            background: transparent;
+                        }
+                    }
+                }
+            }
+        }
+
+        .dark-mode {
+            position: absolute;
+            top:  -5px;
+            right: 25px;
+            cursor: pointer;
             border-radius: 8px;
-            transition: all .2s ease-in-out;
-            &:hover {
-                background: #373780;
-                color: #fff;
+            padding: 5px;
+            @media screen and (max-width: $tablet) { 
+                display: none;
             }
         }
     }
-
+    
     .waves {
         position: absolute;
-        top: auto;
         bottom: 0;
-        background: #000;
     }
 }
 

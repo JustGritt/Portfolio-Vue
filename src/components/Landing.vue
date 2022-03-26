@@ -8,20 +8,17 @@
             <img src="/src/assets/clouds-left.svg" alt="Clouds">
         </div>
 
-        <div class="hero-text">
+        <div class="hero-text flex">
             <div class="left-section">
                 <h2>Je m'appelle Alexis TAN</h2>
-                <p>Un développeur web & un étudiant en <span class="is-underline">alternance !</span></p>
-                <p> qui aime créer des expériences web soignées et agréables</p>
+                <p>Un développeur web & un étudiant en <span class="is-underline">alternance</span> </p>
+                <p>qui aime créer des expériences web soignées et agréables</p>
                 <div class="cta-container">
                     <a href="#">Prêt à travailler ensemble ?</a>
                     <a href="#">Consulter mon CV</a>
                 </div>
             </div>
-            
-            <div class="right-section moon is-flex">
-                <img src="/src/assets/turtle.png" alt="Mon icone" class="rotating-icon"/>
-            </div>
+            <div class="right-section moon is-flex"></div>
         </div> 
 
         <div class="clouds clouds-right">
@@ -31,10 +28,10 @@
     </section>
 </template>
 
-
-
-
 <style lang="scss" scoped>
+@import "/src/scss/globals.scss";
+@import "/src/scss/colors.scss";
+@import "/src/scss/fonts.scss";
 
 section#landing {
     position: relative;
@@ -46,78 +43,84 @@ section#landing {
     flex-direction: column;
     overflow: hidden;
     background: linear-gradient(180deg, #B19EFF 0%, #FFBFE0 100%);
-    font-family: 'Quicksand';
     .clouds {
         position: absolute;
         top: 0;
         width: 100%;
         &-left { text-align: left; }
         &-right { text-align: right; }
-        img {
-            width: 33vw;
-        }
+        img { width: 33vw; }
     }
     .hero-text {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
         top: -100px;
         margin: 0 150px;
         color: #504980;
-        font-family: 'Quicksand', sans-serif;
         z-index: 1;
-        @media screen and (max-width: 768px) { flex-direction: column; }
+        @media screen and (max-width: $tablet) { flex-direction: column; }
         .left-section {
+            position: absolute;
             justify-content: flex-start;
             text-align: left;
-            @media screen and (max-width: 768px) { margin-top: 200px; }
+            z-index: 1;
+            @media screen and (max-width: $tablet) { 
+                top: 25%;
+                margin: 50px 100px;
+                text-align: center;
+            }
+            @media screen and (max-width: $mobile) {
+                margin: 0 100px;
+                text-align: center;
+            }
         
             h2 {
-                font-size: clamp(2rem, 5vw, 3.5rem);
-                font-weight: bold;
-                margin: 0;
-                font-family: 'Staatliches', sans-serif;
-
+                margin-bottom: 15px;
                 &::before {
                     content: 'Bonjour ! 👋 こんにちは。';
                     display: block;
-                    margin: 0;
-                    font-size: clamp(1rem, 5vw, 1.5rem);
-                    font-weight: 700;
+                    font-size: clamp(1.5rem, 15vw, 2.5vw);
+                    font-weight: bold;
                 }
             }
 
-            p {
-                font-size: clamp(1rem, 9vw, 24px);
-                font-weight: bold;
+            p { 
+                font-weight: bold; 
+                line-height: 1.7;
                 margin: 0;
+                + p { margin-bottom: 15px;}
             }
 
             .cta-container {
                 display: flex;
-                justify-content: flex-start;
-                align-items: flex-start;
                 flex-wrap: wrap;
+                @media screen and (max-width: $tablet) {
+                    justify-content: center;
+                    align-content: center;
+                }
                 a {
+                    font-size: clamp(1rem, 9vw, 1vw);
                     background: #504980;
                     margin: 25px 50px 0 0;
                     color: #fff;
                     padding: 20px;
-                    display: block;
                     width: 250px;
-                    font-size: clamp(1rem, 9vw, 18px);
-                    text-decoration: none;
+                    font-weight: bold;
                     text-align: center;
                     border-radius: 5px;
-                    &:nth-child(2) {
-                        background: #ffe7e7;
-                        color: #000;
-                        font-weight: bold;
+                    transition: all .2s ease-in-out;
+                    @media screen and (max-width: $tablet) { margin: 10px auto; }
+                    &::before {
+                        position: absolute;
+                        content: '>';
+                        transform: translateX(-500%);
+                        opacity: 0;
+                        transition: all .2s ease-in-out;
+                    }
+                    &:hover::before {
+                        transform: translateX(-200%);
+                        opacity: 1;
                     }
                 }
             }
-
         }
 
         .right-section {
@@ -125,31 +128,31 @@ section#landing {
             background: #FFE7E7;
             border-radius: 100%;
             &.moon {
-                width: 15vw;
-                height: 15vw;
-
-                @media screen and (min-width: 768px) and (max-width: 1200px) {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 50vw;
+                width: 50vw;
+                position: absolute;
+                bottom: -25vw;
+                transition: all .2s ease-in-out;
+                @media screen and (max-width: 1200px) {
+                    bottom: -25%;
+                    width: 600px;
+                    height: 600px;
+                    margin: 0;
+                    position: absolute;
+                    touch-action: auto;
+                }
+                @media screen and (max-width: 768px) {
                     width: 300px;
-                    height: 200px;
+                    height: 300px;
+                    position: absolute;
+                    bottom: 0%;
                 }
-
-                @media screen and (max-width: 768px) {
-                    margin: 15px;
-                    width: 125px;
-                    height: 125px;
-                }
+                img { width: 125px; }
             }
 
-            img {
-                width: 125px;
-                position: relative;
-                top: -25px;
-                animation: rotate-bounce 10s infinite;
-
-                @media screen and (max-width: 768px) {
-                    width: 75px;
-                }
-            }
         }
     }
 
@@ -160,6 +163,7 @@ section#landing {
         width: 100%;
         background-image: url('/src/assets/project-waves.svg');
         background-size: cover;
+        z-index: 1;
     }
 
 }

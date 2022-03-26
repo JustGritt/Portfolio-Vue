@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Lato:wght@100;400;700&family=Staatliches&display=swap');
+
+
+/* CLASSES 
+======================= */
+
+// $base-font : 16 !default; 
+// $line-height : 1.5 !default;
+// $px : 1;
+// $base : 1;
+
+// @function em($px, $base: $base-font) {
+//     @return ($px / $base) * 1em;
+// }
+
+$primary: 'Staatliches', sans-serif;
+$secondary: 'Concert One', sans-serif;
+$paragraph : 'Quicksand', serif;
+
+/* CLASSES 
+======================= */
+
+h1, h2, h3, .title, .sub-title {
+    font-family: $primary;
+    margin: 0;
+}
+
+p, input, a {
+    font-family: $paragraph;
+    font-size: clamp(16px, 9vw, 1.25vw);
+    line-height: 1.4;
+}
+
+h1, .h1 {
+    display: block;
+    font-size: clamp(1.5rem, 5vw, 76px);
+    font-weight: bold;
+}
+
+h2, .h2 {
+    display: block;
+    font-size: clamp(2rem, 5vw, 5vw);
+    font-weight: bold;
+}
+
+h3, .h3, .title {
+    display: block;
+    font-size: clamp(1rem, 5vw, 48px);
+    font-weight: normal;
+}
+
+.sub-title {
+    font-size: clamp(1rem, 5vw, 24px);
+    margin: 20px 0;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+a, .link {
+    text-decoration: none;
+}
