@@ -6,11 +6,11 @@
     <section id="projects">
         <div class="waves"></div>
         <h3 class="title">Quelques projets</h3>
+        <div class="collection">
+            <CollectionItem v-for="project in projects" :key="project.id" :project="project" />
+        </div>
     </section>
 </template>
-
-
-
 
 <style lang="scss" scoped>
 @import "/src/scss/globals.scss";
@@ -27,18 +27,17 @@ section#projects {
     flex-direction: column;
     overflow: hidden;
     background: #8a81cc;
-    border-top: 5px solid #8a81cc;
+    border-bottom: 5px solid #8a81cc;
     font-family: 'Quicksand';
     h3 {
         position: absolute;
         top: 0;
-        padding-top: 125px;
+        padding-top: 75px;
         width: 100%;
         color: #fff;
         margin-bottom: 50px;
         text-align: center;
         font-family: $secondary;
-
     }
 
     .waves {
@@ -51,6 +50,8 @@ section#projects {
         background-repeat: no-repeat;
         z-index: 10;
     }
+
+
 }
 
 

@@ -70,7 +70,6 @@ header {
             }
         }
         
-
         .dark-mode {
             position: absolute;
             top:  -5px;
@@ -84,10 +83,6 @@ header {
         }
     }
     
-    .waves {
-        position: absolute;
-        bottom: 0;
-    }
 }
 
 </style>

@@ -24,9 +24,6 @@ section#timeline {
     justify-content: center;
     align-content: center;
     flex-direction: column;
-    overflow: hidden;
-    background: black;
-    border-top: 5px solid #8a81cc;
     font-family: 'Quicksand';
     background: linear-gradient(180deg, #B19EFF 0%, #FFBFE0 100%);
     h3 {
@@ -49,8 +46,10 @@ section#timeline {
         width: 100%;
         background-image: url('/src/assets/project-waves.svg');
         background-repeat: no-repeat;
-        z-index: 10;
+        background-size: cover;
+        z-index: 1;
     }
+
 }
 
 
