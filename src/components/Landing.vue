@@ -24,7 +24,7 @@
         <div class="clouds clouds-right">
             <img src="/src/assets/clouds-right.svg" alt="Clouds">
         </div>
-        <div class="waves"></div>
+        <!-- <div class="waves"></div> -->
     </section>
 </template>
 
@@ -35,7 +35,7 @@
 
 section#landing {
     position: relative;
-    height: 100vh;
+    height: 95vh;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -43,6 +43,19 @@ section#landing {
     flex-direction: column;
     overflow: hidden;
     background: linear-gradient(180deg, #B19EFF 0%, #FFBFE0 100%);
+    &::after {
+    
+        content: "";
+        position: absolute;
+        bottom: -25px;
+        min-height: 150px;
+        width: 100%;
+        background-image: url('/src/assets/project-waves.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: 10;
+    
+    }
     .clouds {
         position: absolute;
         top: 0;
@@ -77,7 +90,7 @@ section#landing {
                 &::before {
                     content: 'Bonjour ! 👋 こんにちは。';
                     display: block;
-                    font-size: clamp(1.5rem, 15vw, 2.5vw);
+                    font-size: clamp(1.5rem, 15vw, 2vw);
                     font-weight: bold;
                 }
             }
@@ -155,7 +168,6 @@ section#landing {
 
         }
     }
-
     .waves {
         position: absolute;
         bottom: -5px;

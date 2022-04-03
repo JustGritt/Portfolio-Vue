@@ -1,7 +1,5 @@
 <script setup>  
     defineProps({ msg: String })
-
-    
 </script>
 
 <template>
@@ -33,11 +31,11 @@ header {
     transition: all .2s ease-in-out;
     &:hover {
         background: rgba(255, 255, 255, .7);
-        border-bottom: 10px solid $dark-blue;
+        border-bottom: 8px solid $dark-blue;
     }
     @media screen and (max-width: $mobile) { 
         background: rgba(255, 255, 255, .7); 
-        border-bottom: 10px solid $dark-blue;
+        border-bottom: 5px solid $dark-blue;
     }
     nav { 
         position: relative;
@@ -47,7 +45,7 @@ header {
             text-align: center;
             a {
                 font-family: $secondary;
-                font-size: clamp(1vw, 9vw, 1.7vw);
+                font-size: clamp(1vw, 9vw, 1.5rem);
                 color: $dark-blue;
                 padding: 10px 15px;
                 border-radius: 8px;
@@ -56,7 +54,7 @@ header {
                     background: #373780; 
                     color: #eee; 
                 }
-                @media screen and (max-width: $mobile) {
+                @media screen and (max-width: $tablet) {
                     font-size: clamp(12px, 9vw, 18px);
                     margin: 0;
                     padding: 0;

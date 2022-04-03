@@ -1,19 +1,28 @@
 <script setup>
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
 import HelloWorld from './components/HelloWorld.vue'
 import Header from './components/partials/Header.vue'
 import Landing from './components/Landing.vue'
 import Projects from './components/Projects.vue'
 import Timeline from './components/Timeline.vue'
+import CollectionItem from './components/partials/CollectionItem.vue'
 </script>
 
 <template>
   <Header />
   <Landing />
-  <Projects />
-  <Timeline />
+  <Projects></Projects>
+  <Timeline></Timeline>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      count: 0
+    }
+  }
+}
+</script>
 
 <style>
 

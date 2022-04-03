@@ -44,13 +44,13 @@ h1, .h1 {
 
 h2, .h2 {
     display: block;
-    font-size: clamp(2rem, 5vw, 5vw);
+    font-size: clamp(2rem, 5vw, 4.1vw);
     font-weight: bold;
 }
 
 h3, .h3, .title {
     display: block;
-    font-size: clamp(1.75rem, 3vw, 5vw);
+    font-size: clamp(1.75rem, 3vw, 3.7vw);
     font-weight: normal;
 }
 
