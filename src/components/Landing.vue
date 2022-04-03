@@ -1,7 +1,3 @@
-<script setup>  
-    defineProps({ msg: String })
-</script>
-
 <template>
     <section id="landing">
         <div class="clouds clouds-left">
@@ -44,7 +40,6 @@ section#landing {
     overflow: hidden;
     background: linear-gradient(180deg, #B19EFF 0%, #FFBFE0 100%);
     &::after {
-    
         content: "";
         position: absolute;
         bottom: -25px;
@@ -53,8 +48,7 @@ section#landing {
         background-image: url('/src/assets/project-waves.svg');
         background-repeat: no-repeat;
         background-size: cover;
-        z-index: 10;
-    
+        z-index: 1;
     }
     .clouds {
         position: absolute;

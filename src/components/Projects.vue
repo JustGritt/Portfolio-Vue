@@ -78,7 +78,6 @@ section#projects {
         padding: 0;
         width: 75%;
         @media screen and (max-width: $tablet) { 
-            background: hotpink;
             width: 90%;
         }
     }

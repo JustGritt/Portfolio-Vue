@@ -29,6 +29,8 @@ header {
     width: 100%;
     z-index: 10;
     transition: all .2s ease-in-out;
+    border-bottom: 5px solid $dark-blue;
+    background: rgba(255, 255, 255, .3);
     &:hover {
         background: rgba(255, 255, 255, .7);
         border-bottom: 8px solid $dark-blue;
