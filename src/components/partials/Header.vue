@@ -29,18 +29,20 @@ header {
     width: 100%;
     z-index: 10;
     transition: all .2s ease-in-out;
-    border-bottom: 5px solid $dark-blue;
-    background: rgba(255, 255, 255, .3);
-    &:hover {
-        background: rgba(255, 255, 255, .7);
-        border-bottom: 8px solid $dark-blue;
-    }
+    // border-bottom: 5px solid $dark-blue;
+    // background: rgba(255, 255, 255, 1);
     @media screen and (max-width: $mobile) { 
-        background: rgba(255, 255, 255, .7); 
+        background: rgba(255, 255, 255, 1);
         border-bottom: 5px solid $dark-blue;
     }
     nav { 
         position: relative;
+        ul {
+            background: white;
+            width: fit-content;
+            margin: 15px auto;
+            border-radius: 100px;
+        }
         li { 
             display: flex;
             margin: 0 25px;
@@ -50,11 +52,9 @@ header {
                 font-size: clamp(1vw, 9vw, 1.5rem);
                 color: $dark-blue;
                 padding: 10px 15px;
-                border-radius: 8px;
                 transition: all .2s ease-in-out;
                 &:hover { 
-                    background: #373780; 
-                    color: #eee; 
+                    color: #3d3d8b;
                 }
                 @media screen and (max-width: $tablet) {
                     font-size: clamp(12px, 9vw, 18px);

@@ -1,5 +1,5 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+// import HelloWorld from './components/HelloWorld.vue'
 import Header from './components/partials/Header.vue'
 import Landing from './components/Landing.vue'
 import Projects from './components/Projects.vue'
